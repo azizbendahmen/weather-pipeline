@@ -43,3 +43,18 @@ cd src && python scheduler.py
 ```bash
 streamlit run dashboard/app.py
 ```
+## Structure
+
+weather-pipeline/
+├── src/
+│ ├── extract.py # appel API OpenWeatherMap
+│ ├── transform.py # nettoyage + validation
+│ ├── load.py # insertion PostgreSQL
+│ ├── pipeline.py # orchestration ETL
+│ └── scheduler.py # exécution horaire
+├── dashboard/
+│ └── app.py # interface Streamlit
+├── tests/
+│ └── test_transform.py
+├── docker-compose.yml
+└── .env.example
