@@ -60,3 +60,9 @@ weather-pipeline/
 ├── docker-compose.yml
 └── .env.example
 ```
+
+## Tests
+
+```bash
+pytest tests/ -v
+```
